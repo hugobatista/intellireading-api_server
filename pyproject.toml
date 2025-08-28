@@ -167,6 +167,7 @@ lint.select = [
 lint.ignore = [
   # Ignore Import block is un-sorted or un-formatted
   "I001",
+  "PLC0415",
   # Ignore function call in argument defaults
   "B008",
 ]
