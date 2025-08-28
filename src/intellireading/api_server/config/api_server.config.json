@@ -20,9 +20,8 @@
                     "http://localhost:8080",
                     "http://localhost",
                     "https://www.intellireading.com",
-                    "https://intellireading.com",
-                    "http://intellireading.test:8080",
-                    "http://www.intellireading.test:8080"
+                    "https://www-dev.intellireading.com",
+                    "https://intellireading.com"
                 ],
                 "allow_credentials": true,
                 "allow_methods": ["*"],
