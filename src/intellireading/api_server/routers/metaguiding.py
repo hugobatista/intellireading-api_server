@@ -10,7 +10,7 @@ from intellireading.api_server.monitoring.instrumentation import (
     current_span_set_attribute,
 )
 from werkzeug.utils import secure_filename
-from intellireading.client.metaguiding import metaguide_epub, metaguide_xhtml
+from intellireading.client.metaguiding import metaguide_epub_stream, metaguide_xhtml_stream
 
 
 router = APIRouter(prefix="/metaguiding", tags=["metaguiding"])
@@ -210,7 +210,7 @@ async def transform_xhtml(
     return await _process_file_request(
         request,
         file,
-        lambda xhtml_content: metaguide_xhtml(xhtml_content),
+        lambda xhtml_content: metaguide_xhtml_stream(xhtml_content),
     )
 
 
@@ -228,7 +228,7 @@ async def transform_epub(
     return await _process_file_request(
         request,
         file,
-        lambda epub_content: metaguide_epub(epub_content),
+        lambda epub_content: metaguide_epub_stream(epub_content),
     )
 
 
@@ -247,7 +247,7 @@ async def submit_epub(
     return await _process_file_request(
         request,
         file,
-        lambda epub_input: metaguide_epub(epub_input),
+        lambda epub_input: metaguide_epub_stream(epub_input),
     )
 
 

@@ -43,7 +43,7 @@ dependencies = [
   "opentelemetry-instrumentation-fastapi>=0.50b0",
   "opentelemetry-exporter-otlp>=1.29.0",
   "aiohttp>=3.10.5",
-  "intellireading-cli>=2.0.0",
+  "intellireading-cli>=2.1.0",
 ]
 [tool.hatch.metadata]
 allow-direct-references = true
