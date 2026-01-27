@@ -59,7 +59,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@v5
       with:
-        images: ghcr.io/0x6f677548/intellireading-api_server/api_server
+        images: ghcr.io/hugobatista/intellireading-api_server/api_server
 
 
     - name: Build and push

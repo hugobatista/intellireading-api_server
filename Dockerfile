@@ -17,7 +17,7 @@ FROM python:3-slim
 ENV PIP_ROOT_USER_ACTION=ignore
 
 # Links Docker image with repository
-LABEL org.opencontainers.image.source=https://go.hugobatista.com/gh/intellireading-api_server
+LABEL org.opencontainers.image.source=https://github.com/hugobatista/intellireading-api_server
 
 RUN mkdir /app
 
