@@ -9,7 +9,6 @@ from intellireading.api_server.monitoring.instrumentation import (
 from opentelemetry.trace import Tracer
 from opentelemetry import trace
 
-
 _logger: logging.Logger = logging.getLogger(__name__)
 
 

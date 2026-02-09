@@ -12,7 +12,6 @@ from intellireading.api_server.monitoring.instrumentation import (
 from werkzeug.utils import secure_filename
 from intellireading.client.metaguiding import metaguide_epub_stream, metaguide_xhtml_stream
 
-
 router = APIRouter(prefix="/metaguiding", tags=["metaguiding"])
 # Get the logger for this module
 _logger: logging.Logger = logging.getLogger(__name__)
@@ -210,7 +209,7 @@ async def transform_xhtml(
     return await _process_file_request(
         request,
         file,
-        lambda xhtml_content: metaguide_xhtml_stream(xhtml_content),
+        metaguide_xhtml_stream,
     )
 
 
@@ -228,7 +227,7 @@ async def transform_epub(
     return await _process_file_request(
         request,
         file,
-        lambda epub_content: metaguide_epub_stream(epub_content),
+        metaguide_epub_stream,
     )
 
 
@@ -247,7 +246,7 @@ async def submit_epub(
     return await _process_file_request(
         request,
         file,
-        lambda epub_input: metaguide_epub_stream(epub_input),
+        metaguide_epub_stream,
     )
 
 
